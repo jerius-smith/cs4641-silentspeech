@@ -12,20 +12,18 @@
 </head>
 <header>
     <div class="container-fluid p-3 my-3 bg-dark text-white">
-        <h1>Silent Speech Detection</h1>
+        <h1>Silent Speller</h1>
         <p>CS 4641 Spring 2020</p>
     </div>
 </header>
 <body>
     <div class="info">
         <h2>Introduction</h2>
-        <p>Silent Speech Detection aims to detect language when no sound is transmitted. This technology can be implemented in many use cases, such as
-            private communication between soldiers on a battle field, or interacting with conversational AI, like Siri or Alexa, in noisy environments.
-            Research has gone into using many different mechanisms to capture data from the mouth. Some have used surface electromyography and
-            video. But we would like to use SmartPalate, a retainer-like device which can be used to track the position of of tongue. Unlike
-            other devices, SmartPalate is partially invisible and can be used when walking. Our goals is to link sensor information to letters.
-            Our work expands upon prior work that focused on word utterances. By focusing on utterances at the letter level, users will have increased
-            flexibility compared to a 15-word vocabulary which was used in previous work.</p>
+        <p>Silent Speller aims to recognize language from silent utterances. This technology is useful for people with speech impairments, in noisy environments, and in social situations that restrict speech.
+            Researchers have explored using different sensors, like surface electromyography and
+            video, to capture data that encodes speech. We further existing research on speech recognition by using Hidden Markov Models to recognize silent utterances at the letter level, and increase the accuracy of our recognizer by introducing a context training and a statistical grammar.
+            Unlike other devices, SmartPalate is partially invisible and can be used when walking. Our goals is to link sensor information to letters.
+            </p>
         <div class="figures">
             <div class="figure">
                 <img src="./res/SmartPalate.png" height="450" width="450">
