@@ -17,12 +17,16 @@
     </div>
 </header>
 <body>
-    <div class="info">
-        <h2>Introduction</h2>
-        <p>We created a silent spelling system that aims to recognize language from silent utterances. This system is useful for people with speech impairments, for people in noisy environments, and for people in social situations that restrict speech. Speech impairments may result from ALS, tracheostomies, or deafness. Noisy environments limit the effectivess of conversational AI. Social situations, like lectures or meetings, may require a subtler interface than speech. Additionally, silent speech systems provide more privacy for sharing information than speech.
-            Researchers have explored using different sensors, like surface electromyography and
-            video, to capture data that encodes speech without the limitations of speech. We further existing research on speech recognition by using Hidden Markov Models to recognize silent utterances at the letter level, and increase the accuracy of our recognizer by introducing context training and a statistical grammar.
-            </p>
+  <div class="info">
+    <h2>Introduction</h2>
+     <p>Silent Speech Detection aims to detect language when no sound is transmitted. This technology can be implemented in many use cases, such as
+            private communication between soldiers on a battle field, or interacting with conversational AI, like Siri or Alexa, in noisy environments.
+            Research has gone into using many different mechanisms to capture data from the mouth. Some have used surface electromyography and
+            video. But we would like to use SmartPalate, a retainer-like device which can be used to track the position of of tongue. Unlike
+            other devices, SmartPalate is partially invisible and can be used when walking. Our goals is to link sensor information to letters.
+            Our work expands upon prior work that focused on word utterances. By focusing on utterances at the letter level, users will have increased
+            flexibility compared to a 15-word vocabulary which was used in previous work.</p>
+      <h2>Related Works</h2>
         <div class="figures">
             <div class="figure">
                 <img src="./res/SmartPalate.png" height="450" width="450">
@@ -32,31 +36,34 @@
 
     </div>
     <div class="info">
-        <h2>Related Works</h2>
-
-
-        <h2>System Overview</h2>
-        <p>The SmartPalate is a retainer fitted with 124 capacitive sensors. Each sensor records a zero or one at a frequency of 100Hz. The SmartPalate was used by an individual to collect two datasets. The first dataset consisted of 20 samples of each letter of the alphabet. The second dataset consisted of 10 samples of 10 phrases from the Mackenzie phrase set, that were constructed from the best recognized letters from the first dataset. The algorithm used to classify the first dataset was a Hidden Markov Model. The algorithm used to classify the second dataset was a Hidden Markov Model with context training and a statistical grammar.
-
+        <h2>Experimental Design</h2>
+        <p>We retrieved our data sets from the Contextual Computing Group at Georgia Tech ran by Dr. Thad Starner. The data
+            consists of sensor information from 20 samples of each letter in the english alphabet. The SmartPalate device
+            is made up of 124 capacitive sensors and each sensor reads as a 1 or a 0 at every time step. Therefore, each sample
+            is a text file with 12400 ones and zeros. There are originally 100 time steps for each sample but we will reduce the
+            number of time steps for each sample. </p>
         <div class="figures">
-            <div class="figure">
-                <img src="./res/a_data.png" height="450" width="450">
+            <div class="inlineFigure">
+                <img src="./res/a_data.png">
                 <p>Figure 2-1: 3D Bar Plot of the first sample of the letter "A"</p>
             </div>
-            <div class="figure">
-                <img src="./res/b_data.png" height="450" width="450">
+            <div class="inlineFigure">
+                <img src="./res/b_data.png">
                 <p>Figure 2-2: 3D Bar Plot of the first sample of the letter "B"</p>
+            </div>
+            <div class="inlineFigure">
+                <img src="./res/w_data.png">
+                <p>Figure 2-3: 3D Bar Plot of the first sample of the letter "W"</p>
             </div>
         </div>
     </div>
     <div class="info">
-        <h2>Evaluation</h2>
-        The accuracy of our models were determined by its offline classification performance.
-
+        <h2></h2>
         <p></p>
     </div>
     <div class="info">
-        <h2>Conclusion and Future Work</h2>
+      <h2>Evaluation</h2>
+      <h2>Conclusion</h2>
         <p></p>
         <h2>References</h2>
     </div>
