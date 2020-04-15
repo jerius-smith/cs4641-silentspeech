@@ -46,6 +46,7 @@
             context training and a statistical grammar.
         </p>
         <div class="figures">
+<<<<<<< HEAD
             <div class="figure">
                 <img src="./res/A1data.png" height="450" width="450">
                 <p>Figure 2-1: Visualization of activated capacitive sensors from the first sample of the letter "A"</p>
@@ -57,6 +58,7 @@
             <div class="figure">
                 <img src="./res/C1data.png" height="450" width="450">
                 <p>Figure 2-2: Visualization of activated capacitive sensors from the first sample of the letter "C"</p>
+=======
             <div class="inlineFigure">
                 <img src="./res/a_data.png">
                 <p>Figure 2-1: 3D Bar Plot of the first sample of the letter "A"</p>
@@ -64,6 +66,7 @@
             <div class="inlineFigure">
                 <img src="./res/b_data.png">
                 <p>Figure 2-2: 3D Bar Plot of the first sample of the letter "B"</p>
+>>>>>>> c88c8fb342d1a6c48a0f35388072f09dafd77794
             </div>
             <div class="inlineFigure">
                 <img src="./res/w_data.png">
@@ -76,9 +79,16 @@
         <p></p>
     </div>
     <div class="info">
+<<<<<<< HEAD
         <h2>Conclusion and Future Work</h2>g
+=======
       <h2>Evaluation</h2>
       The accuracy of our models were determined by its offline classification performance.
+
+      <p></p>
+      <h2>Conclusion</h2>
+>>>>>>> c88c8fb342d1a6c48a0f35388072f09dafd77794
+        <p></p>
         <h2>References</h2>
     </div>
 </body>
