@@ -14,8 +14,7 @@ body {
 }
 
 .info h2 {
-    padding-left: 50%;
-    padding-right: 50%;
+    text-align: center;
 }
 
 .figures {
