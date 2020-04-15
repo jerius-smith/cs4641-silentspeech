@@ -39,32 +39,36 @@
 
       More recently, a silent speech recognition system was developed by Li. The system relied on the CompleteSpeech SmartPalate to collect data and a support vector machine to recognize speech from the collected data.
 
+
     </div>
     <div class="info">
         <h2>Experimental Design</h2>
-        <p>The SmartPalate is a retainer fitted with 124 capacitive sensors. Each sensor records a zero or one at a frequency
-            of 100Hz. The SmartPalate was used by an individual to collect two datasets. The first dataset consisted of 20 samples
-            of each letter of the alphabet. The second dataset consisted of 10 samples of 10 phrases from the Mackenzie phrase set,
-            that were constructed from the best recognized letters from the first dataset. The algorithm used to classify the first
-            dataset was a Hidden Markov Model. The algorithm used to classify the second dataset was a Hidden Markov Model with
-            context training and a statistical grammar.
+        <p>In an effort to develop our silent speller system, we collected data, trained a Hidden Markov Model to recognize silent utterances of letters, and optimized our pipeline with respect to speed and memory.
+
+            The CompleteSpeech SmartPalate is a retainer fitted with 124 capacitive sensors. Each sensor records a zero or one at a frequency
+            of 100Hz. The SmartPalate was used by an individual to collect our dataset. The dataset consisted of 20 samples
+            of each letter of the alphabet.
+
+            <div class="figures">
+                <div class="inlineFigurefigure">
+                    <img src="./res/A1.png" height="288" width="432">
+        <p>Figure 2-1: Visualization of activated capacitive sensors from the first sample of the letter "A"</p>
+    </div>
+
+  <div class="inlineigure">
+      <img src="./res/AllSensors.png" height="288" width="432">
+      <p>Figure 2-2: Visualization of all capacitive sensors in SmartPalate activated.</p>
+  </div>
+
+  <div class="inlineFigurefigure">
+      <img src="./res/B1.png" height="288" width="432">
+      <p>Figure 2-2: Visualization of activated capacitive sensors from the first sample of the letter "B"</p>
+  </div>
+  </div>
+
+            The algorithm used to classify the first dataset was a Hidden Markov Model.
         </p>
-        <div class="figures">
-            <div class="inlineFigurefigure">
-                <img src="./res/A1.png" height="288" width="432">
-                <p>Figure 2-1: Visualization of activated capacitive sensors from the first sample of the letter "A"</p>
-            </div>
 
-            <div class="inlineigure">
-                <img src="./res/AllSensors.png" height="288" width="432">
-                <p>Figure 2-2: Visualization of all capacitive sensors in SmartPalate activated.</p>
-            </div>
-
-            <div class="inlineFigurefigure">
-                <img src="./res/B1.png" height="288" width="432">
-                <p>Figure 2-2: Visualization of activated capacitive sensors from the first sample of the letter "B"</p>
-            </div>
-        </div>
     </div>
     <div class="info">
         <h2></h2>
