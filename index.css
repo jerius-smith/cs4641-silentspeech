@@ -13,8 +13,13 @@ body {
     padding-right: 30%;
 }
 
+.info ol {
+    padding-left: 30%;
+    padding-right: 30%;
+}
+
 .info h2 {
-    width: 500px;
+    width: auto;
     padding-left: 30%;
     padding-right: 30%;
 }
