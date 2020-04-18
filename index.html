@@ -40,18 +40,27 @@
       By 2003, the burgeoning field of wearable computing saw increased use of gesture recognition as a tool for interaction. However, building systems for gesture recognition required significant knowledge and effort. Westeyn developed the Georgia Tech Gesture Toolkit on top of HTK to ease the development of such a system. The Georgia Tech Gesture Toolkit trains models that recognize in real-time and off-line.
       </p>
       <p>
-      More recently, a silent speech recognition system was developed by Li. The system relied on the CompleteSpeech SmartPalate to collect data and a support vector machine to recognize speech from the collected data.
+      More recently, a silent speech recognition system was developed by Li. The system relied on the CompleteSpeech SmartPalate to collect data and a support vector machine to recognize speech from the collected data. The system had a 21 word vocabulary, and was evaluated through user studies with offline and online recognition for native and non-native users. Li also examined interaction with the silent spelling system in two settings: sitting and walking. Their results indicated that the system used by native speakers had high accuracy and information transfer rate comparable to that of a mouse and touchscreen.
       </p>
+
+      <p>
+
+
+      </p>
+
+      <
 
     </div>
     <div class="info">
         <h2>Experimental Design</h2>
-        <p>In an effort to develop our silent speller system, we collected data, trained a Hidden Markov Model to recognize silent utterances of letters, and optimized our pipeline with respect to speed and memory.
+        <p>In an effort to develop our silent speller system, we trained a Hidden Markov Model to recognize silent utterances of letters using a dataset collected by Naoki Kimura, and optimized our pipeline with respect to speed and memory.<br></p>
 
 
-            The CompleteSpeech SmartPalate is a retainer fitted with 124 capacitive sensors. Each sensor records a zero or one at a frequency
-            of 100Hz. The SmartPalate was used by an individual to collect our dataset. The dataset consisted of 20 samples
-            of each letter of the alphabet. </p>
+        <h4>Data collection</h4>
+
+       <p>     The CompleteSpeech SmartPalate is a retainer fitted with 124 capacitive sensors. Each sensor records a zero or one at a frequency
+            of 100Hz. Naoki used the SmartPalate to collect the dataset used to train and test our Hidden Markov Models. The dataset consisted of 20 samples
+            of each letter of the alphabet. Each sample was collected over the course of a second, so each sample consists of 100 frames of a 124 diminsional binary vector.</p>
 
         <div class="figures">
             <div class="inlineFigurefigure">
@@ -70,8 +79,15 @@
             </div>
         </div>
 
+        <h4>Data Processing</h4>
+
         <p>
-            The algorithm used to classify the first dataset was a Hidden Markov Model.
+            The algorithm used to classify the first dataset was a Hidden Markov Model. Specifically, we used a left-to-right Hidden Markov Model, which results in a HMM representation like in figure_:
+
+
+
+
+
             To optimize our silent spelling system's speed,
         </p>
 
@@ -88,8 +104,8 @@
         <img
             src="./res/confusionMatrix.svg"
             alt="Confusion Matrix"
-            height="400"
-            width="400" />
+            height="800"
+            width="800" />
 
         <h2>Conclusion and Future Work</h2>
         <p>The accuracy of our models were determined by its offline classification performance.</p>

@@ -23,6 +23,11 @@ body {
     padding-left: 45%;
     padding-right: 30%;
 }
+.info h4 {
+    width: auto;
+    padding-left: 45%;
+    padding-right: 30%;
+}
 
 .figures {
     display: flex;
