@@ -60,7 +60,7 @@
 
        <p>     The CompleteSpeech SmartPalate is a retainer fitted with 124 capacitive sensors. Each sensor records a zero or one at a frequency
             of 100Hz. Naoki used the SmartPalate to collect the dataset used to train and test our Hidden Markov Models. The dataset consisted of 20 samples
-            of each letter of the alphabet. Each sample was collected over the course of a second, so each sample consists of 100 frames of a 124 diminsional binary vector.</p>
+            of each letter of the alphabet. Each sample was collected over the course of a second and consisted of 100 frames of 124 diminsional binary vectors.</p>
 
         <div class="figures">
             <div class="inlineFigurefigure">
@@ -88,16 +88,23 @@
 
 
 
-            To optimize our silent spelling system's speed, we subsampled the data. Subsamples of the data were created by summing multiple timesteps into a single timestep or grouping the capacitive sensors into sections. To subsample over time, we summed every five consecutive 128 dimensional vectors to a single 128 dimensional vector with values between 0 and 5. Subsampling by section converted each 128 dimensional vector into a 10 dimensional vector with values representing the amount of capacitive sensors activated in each group.
+            To optimize our silent spelling system's speed, we subsampled the data. Subsamples of the data were created by summing multiple timesteps into a single timestep or grouping the capacitive sensors into sections. <br><br>
+
+            To subsample over time, we summed every five consecutive 128 dimensional vectors to a single 128 dimensional vector with values between 0 and 5.
+            <div class="figures">
+                <div class="inlineFigurefigure">
+                    <img src="./res/subsampling.svg" height="600" width="600">
+        <p>Figure 2-4: </p>
+    </div>
+    </div>
+            <p>
+                Subsampling by section converted each 128 dimensional vector into a 10 dimensional vector with values representing the amount of capacitive sensors activated in each group. The performance of the model with respect to speed and accuracy following subsampling by section was 7.9 seconds and 66 percent, respectively.</p>
             <div class="figures">
             <div class="inlineFigurefigure">
                 <img src="./res/AllSensorsGrouped.png" height="288" width="432">
-                <p>Figure 2-4: Visualization of the capacitive sensors that were activated over the course of uttering the letter "B"</p>
+                <p>Figure 2-5: Visualization of the capacitive sensors that were activated over the course of uttering the letter "B"</p>
             </div>
-  <div class="inlineFigurefigure">
-      <img src="./res/subsampling.svg" height="600" width="600">
-      <p>Figure 2-5: </p>
-  </div>
+
 
 </div>
         </p>
@@ -112,16 +119,20 @@
         <p>
             To evaluate our recognizer's accuracy, we performed 4-fold stratified cross validation. The overall accuracy of the model was 79.82%.
         </p>
+        <div class="figures">
+            <div class="inlineFigure">
         <img
             src="./res/confusionMatrix.svg"
             alt="Confusion Matrix"
             height="800"
             width="800" />
-
+                <p>Figure 2-6: Confusion Matrix showing the accuracy of predictions as a proportion.</p>
+            </div>
+        </div>
         <h2>Conclusion and Future Work</h2>
-        <p>The accuracy of our models were determined by its offline classification performance.</p>
+        <p>The accuracy of our models were determined by its offline classification performance. While the accuracy of our model could not support a successful silent spelling system, it provides preliminary results to be improved. The information we gathered about optimizing our models by modifying our datasets through subsampling and our model's architecture (states and skips) will be crucial to further developments in this area of research. Specifically, the optimizations made will enable future silent spelling systems to perform letter recognition in real time.</p>
         <p>Moving forward, we plan on increasing the accuracy of our recognizer
-            by introducing context training and a statistical grammar, measures that have been shown to decrease the error rate by a factor of eight in practice.</p>
+            by introducing context training and a statistical grammar, measures that have been shown to decrease the error rate by a factor of eight in practice. Context training and a statistical grammar will require a dataset that has sequences of data representing phrases silently uttered letter by letter. In our optimizations, subsampling through time was limited by the length of each data sample and number of states in our HMM; This limitation will be relaxed as the length of each data sample increases.</p>
 
         <h2>References</h2>
         <ol>
