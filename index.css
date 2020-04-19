@@ -44,9 +44,9 @@ body {
     margin-right: auto;
 }
 
-.figure img {
-    width: 25%;
-}
+/*.figure img {*/
+    /*width: 25%;*/
+/*}*/
 
 .inlineFigure img {
     width: 75%;

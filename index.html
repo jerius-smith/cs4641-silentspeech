@@ -48,7 +48,6 @@
 
       </p>
 
-      <
 
     </div>
     <div class="info">
@@ -68,7 +67,7 @@
                 <p>Figure 2-1: Visualization of the capacitive sensors that were activated over the course of uttering the letter "A"</p>
             </div>
 
-            <div class="inlineigure">
+            <div class="inlineFigurefigure">
                 <img src="./res/AllSensors.png" height="288" width="432">
                 <p>Figure 2-2: Visualization of the 128 capacitive sensors in the SmartPalate.</p>
             </div>
@@ -91,16 +90,11 @@
             To optimize our silent spelling system's speed, we subsampled the data. Subsamples of the data were created by summing multiple timesteps into a single timestep or grouping the capacitive sensors into sections. <br><br>
 
             To subsample over time, we summed every five consecutive 128 dimensional vectors to a single 128 dimensional vector with values between 0 and 5.
-            <div class="figures">
-                <div class="inlineFigurefigure">
-                    <img src="./res/subsampling.svg" height="600" width="600">
-        <p>Figure 2-4: </p>
-    </div>
-    </div>
+
             <p>
-                Subsampling by section converted each 128 dimensional vector into a 10 dimensional vector with values representing the amount of capacitive sensors activated in each group. The performance of the model with respect to speed and accuracy following subsampling by section was 7.9 seconds and 66 percent, respectively.</p>
+                Subsampling by section converted each 128 dimensional vector into a 10 dimensional vector with values representing the amount of capacitive sensors activated in each group. </p>
             <div class="figures">
-            <div class="inlineFigurefigure">
+            <div class="figure">
                 <img src="./res/AllSensorsGrouped.png" height="288" width="432">
                 <p>Figure 2-5: Groupings of capacitive sensors for subsampling by section.</p>
             </div>
@@ -117,7 +111,18 @@
     <div class="info">
         <h2>Evaluation</h2>
         <p>
-            To evaluate our recognizer's accuracy, we performed 4-fold stratified cross validation. The overall accuracy of the model was 79.82%.
+            The performance of our models varied as we tuned subsampling and number of states.
+
+            <div class="figures">
+                <div class="figure">
+                    <img src="./res/subsampling.svg" height="600" width="600">
+        <p>Figure 2-x: Accuracy and speed of model when subsampled through time.</p>
+    </div>
+  </div>
+
+  <p>The performance of the model with respect to speed and accuracy following subsampling by section was 7.9 seconds and 66 percent, respectively.</p>
+
+            <p>To evaluate our recognizer's accuracy, we performed 4-fold stratified cross validation. The overall accuracy of the model was 79.82%.
         </p>
         <div class="figures">
             <div class="inlineFigure">
