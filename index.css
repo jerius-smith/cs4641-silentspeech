@@ -8,30 +8,23 @@ body {
     padding: 0;
 }
 
-.info p {
-    padding-left: 30%;
-    padding-right: 30%;
+/*.info p {*/
+    /*padding-left: 30%;*/
+    /*padding-right: 30%;*/
+/*}*/
+.info {
+    padding-left: 20%;
+    padding-right: 20%;
 }
 
-.info ol {
-    padding-left: 30%;
-    padding-right: 30%;
-}
-
-.info h2 {
-    width: auto;
-    padding-left: 45%;
-    padding-right: 30%;
-}
-.info h4 {
-    width: auto;
-    padding-left: 45%;
-    padding-right: 30%;
-}
+/*.info ol {*/
+    /*padding-left: 30%;*/
+    /*padding-right: 30%;*/
+/*}*/
 
 .figures {
     display: flex;
-    width: 80%;
+    width: 100%;
     margin-right: auto;
     margin-left: auto;
 }
@@ -49,7 +42,7 @@ body {
 /*}*/
 
 .inlineFigure img {
-    width: 75%;
+    width: 100%;
 }
 
 .inlineFigure {
