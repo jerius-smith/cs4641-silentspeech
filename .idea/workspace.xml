@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5ebcc903-0984-4237-b0ab-1e0432d82522" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -31,8 +30,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="16" column="73" selection-start-line="16" selection-start-column="73" selection-end-line="16" selection-end-column="73" />
+            <state relative-caret-position="234">
+              <caret line="16" column="51" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -144,7 +143,7 @@
       <workItem from="1586968760183" duration="338000" />
       <workItem from="1587169445360" duration="9000" />
       <workItem from="1587475692743" duration="738000" />
-      <workItem from="1587502623765" duration="63000" />
+      <workItem from="1587502623765" duration="1302000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;added images for motivation and data&quot;">
       <created>1586801114236</created>
@@ -174,11 +173,25 @@
       <option name="project" value="LOCAL" />
       <updated>1587476262483</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="adding everyone's name">
+      <created>1587502738587</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1587502738588</updated>
+    </task>
+    <task id="LOCAL-00006" summary="fixing jon's name">
+      <created>1587505143970</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1587505143970</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12600000" />
+    <option name="totallyTimeSpent" value="13839000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="43" y="23" width="1237" height="777" extended-state="0" />
@@ -210,7 +223,9 @@
     <MESSAGE value="&quot;added images for motivation and data&quot;" />
     <MESSAGE value="changed to 2d plots of speech data" />
     <MESSAGE value="fixed formatting and add back 2d plots" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed formatting and add back 2d plots" />
+    <MESSAGE value="adding everyone's name" />
+    <MESSAGE value="fixing jon's name" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixing jon's name" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Gemfile" />
@@ -243,8 +258,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="16" column="73" selection-start-line="16" selection-start-column="73" selection-end-line="16" selection-end-column="73" />
+        <state relative-caret-position="234">
+          <caret line="16" column="51" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
         </state>
       </provider>
     </entry>
