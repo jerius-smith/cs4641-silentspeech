@@ -98,25 +98,25 @@
         <h4>Data Processing</h4>
 
         <p>
-            The algorithm used to classify the first dataset was a Hidden Markov Model. Specifically, we used a left-to-right Hidden Markov Model, which results in a HMM representation like in the figures below:
+            The algorithm used to classify the first dataset was a Hidden Markov Model. Specifically, we used a left-to-right Hidden Markov Model, which results in a HMM representation like in Figure 2-7 below:
             <div class="figures">
                 <div class="figure">
                     <img src="./res/Figure1.PNG" height="218" width="575">
-        <p>Figure 2-7: </p>
+        <p>Figure 2-7: A three state left-to-right Hidden Markov Model with arrows representing transition probabilities.</p>
     </div>
   </div>
 
   <div class="figures">
       <div class="figure">
           <img src="./res/Figure2.PNG" height="205" width="640">
-          <p>Figure 2-8: </p>
+          <p>Figure 2-8: Viterbi trellis of possible outcomes and state transitions through time. </p>
       </div>
   </div>
 
 
+  <p>The HTK Toolkit creates the viterbi trellis and trains the model on the data we provided.</p>
 
-
-            <p>To optimize our silent spelling system's speed, we subsampled the data. Subsamples of the data were created by summing multiple timesteps into a singlgite timestep or grouping the capacitive sensors into sections. <br><br>
+            <p>Since our goal is create a real-time silent spelling system, we needed to optimize our silent spelling system's speed. We did this by subsampling the data. Subsamples of the data were created by summing multiple timesteps into a single timestep or grouping the capacitive sensors into sections. <br><br>
 
             To subsample over time, we summed every five consecutive 128 dimensional vectors to a single 128 dimensional vector with values between 0 and 5.
             </p>
@@ -146,16 +146,22 @@
           <p>Figure 2-10: Accuracy and speed of model when subsampled through time.</p>
       </div>
   </div>
+  <p>The number of frames in each subsample affected the accuracy and speed of our HMMs. Increasing the number of frames in each subsample reduces the amount of information used to train the model, which decreases the time to train the model. However, subsampling the data over time loses temporal information, resulting in decreased prediction accuracy.</p>
+
+
   <div class="figures">
       <div class="figure">
           <img src="./res/states.svg" height="600" width="600">
           <p>Figure 2-11: Accuracy and speed of model with varied number of states.</p>
       </div>
   </div>
+  <p>
+      The number of hidden states in the HMMs also affected the speed and accuracy of our models. Unsurprisingly, as we increased the complexity of our models, the prediction accuracy increased. However, it is important to consider if the model generalizes, which we will evaluate later with cross validation.
+  </p>
 
-  <p>The performance of the model with respect to speed and accuracy following subsampling by section was 7.9 seconds and 66 percent, respectively.</p>
+  <p>For subsampling by section, we grouped the capacitive sensors into 10 sections. The performance of the model with respect to speed and accuracy following subsampling by section was 7.9 seconds and 66 percent, respectively.</p>
 
-            <p>To evaluate our recognizer's accuracy, we performed 4-fold stratified cross validation. The overall accuracy of the model was 79.82%.
+  <p>To evaluate our recognizer's accuracy, we performed 4-fold stratified cross validation on the ten-state model without subsampling through time. The overall accuracy of the model was 79.82%.
         </p>
         <div class="figures">
             <div class="inlineFigure">
@@ -168,9 +174,9 @@
             </div>
         </div>
         <h2>Conclusion and Future Work</h2>
-        <p>The accuracy of our models were determined by its offline classification performance. While the accuracy of our model could not support a successful silent spelling system, it provides preliminary results to be improved. The information we gathered about optimizing our models by modifying our datasets through subsampling and our model's architecture (states and skips) will be crucial to further developments in this area of research. Specifically, the optimizations made will enable future silent spelling systems to perform letter recognition in real time.</p>
+        <p>The accuracy of our models were determined by its offline classification performance. While the accuracy of our model could not support a successful silent spelling system, it provides preliminary results with promise for improvement. The information we gathered about optimizing our models by modifying our datasets through subsampling and our model's architecture (states and skips) will be crucial to further developments in this area of research. Specifically, the optimizations made will enable future silent spelling systems to perform letter recognition in real time. In our optimizations, subsampling through time was limited by the length of each data sample and number of states in our HMM; This limitation will be relaxed as the length of each data sample increases, which will occur with the introduction of context training and a statistical grammar. The speed of our models were additionally limited by verbose output logs on our machines. In the production level silent spelling system, such logs will be removed to support real-time recognition.</p>
         <p>Moving forward, we plan on increasing the accuracy of our recognizer
-            by introducing context training and a statistical grammar, measures that have been shown to decrease the error rate by a factor of eight in practice. Context training and a statistical grammar will require a dataset that has sequences of data representing phrases silently uttered letter by letter. In our optimizations, subsampling through time was limited by the length of each data sample and number of states in our HMM; This limitation will be relaxed as the length of each data sample increases.</p>
+            by introducing context training and a statistical grammar, measures that have been shown to decrease the error rate by a factor of eight in practice. Context training and a statistical grammar will require a dataset that has sequences of data representing phrases or words silently uttered letter by letter.</p>
 
         <h2>References</h2>
         <ol>
